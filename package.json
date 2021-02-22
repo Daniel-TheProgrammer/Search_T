@@ -1,0 +1,22 @@
+{
+  "name": "express-template",
+  "version": "1.0.0",
+  "description": "A boilerplate template for serving an angular application through express",
+  "main": "index.js",
+  "engine": {
+    "node":"0.10.26"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pathiggins13/jobsearch"
+  },
+  "author": "Pat Higgins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pathiggins13/jobsearch/issues"
+  },
+  "homepage": "https://github.com/pathiggins13/jobsearch#readme",
+  "dependencies": {
+    "express": "^4.13.1"
+  }
+}
