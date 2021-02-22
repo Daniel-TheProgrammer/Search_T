@@ -1,0 +1,23 @@
+	
+<div class="container-fluid">
+	<div class="row">
+		<aside class="col-md-4"></aside>
+		<section class="col-md-4 question jumbotron">
+			<form class="row welcome">
+				<div class="input-group col-md-12">
+					<h2> Lets find all the </h2>
+					<input ng-model="entry.jobtitle" class="form-control" id="exampleJob" placeholder="Job Title?">
+					<h2> positions near you! </h2>
+				</div>
+				<div>
+					<div class="btn-group welcome"  role="group" aria-label="Search">
+						<button type="submit" ng-click="submit()" class="btn btn-default welcome">Submit</button>
+					</div>
+					<div class="alert alert-danger" ng-show="none" role="alert">{{none}}</div>
+					<h4>Use <button type="button" ui-sref="search.advanced" class="btn btn-default">Advanced Search</button> to dig a little deeper!</h4>
+				</div>
+			</form>
+		</section>
+		<aside class="col-md-4"></aside>
+	</div>
+</div>

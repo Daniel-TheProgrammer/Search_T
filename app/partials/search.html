@@ -1,0 +1,74 @@
+<!-- Search Structure -->
+<div class="container-fluid">
+	
+	<!-- Fist Seach Section on Left -->
+	<div ng-controller="SearchCtrl">
+		<div class="row">
+			<div class="col-md-4 ">
+				<div class="jumbotron">
+					<form class="container">
+						<!-- Job Type -->
+						<h3> What govJob are you seeking? </h3>
+						<div class="form-group">
+							<input ng-model="entry.jobtitle" class="form-control" id="exampleJob" placeholder="Job Title?">
+						</div>
+						<!-- Location -->
+						<div class="form-group">
+							<input ng-model="entry.location" class="form-control" id="exampleLocation" placeholder="Location?">
+						</div>
+						<!-- Department -->
+						<div class="form-group">
+							<input ng-model="entry.department" class="form-control" id="exampleJob" placeholder="Department?">
+						</div>
+						<!-- Part Time Full Time -->
+						<div class="row">
+							<div class="btn-group  col-md-12">
+								<label>
+									<input ng-model="entry.time" value="part-time" type="radio"> Part-Time
+								</label>
+								<label>
+									<input ng-model="entry.time" value="full-time" type="radio"> Full-Time
+								</label>
+								<label>
+									<input ng-model="entry.time" value="" type="radio"> Both
+								</label>
+								<!-- Fed or State -->
+							</div>
+							<div class="btn-group col-md-12">
+								<label>
+									<input ng-model="entry.level" value="&tags=federal" type="radio"> Federal
+								</label>
+								<label>
+									<input ng-model="entry.level" value="&tags=state" type="radio"> State
+								</label>
+								<label>
+									<input ng-model="entry.level" value="" type="radio"> Both
+								</label>
+							</div>
+						</div>
+						<!-- Pay Range -->
+						<div class="form-group container">
+							<div class="row">
+								<h4 for="exampleLocation">What would you like to be paid?</h4>
+								<div class="input-group">
+									<span class="input-group-addon">$</span>
+									<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" ng-model="search.minamount">
+									<span class="input-group-addon">.00</span>
+								</div>
+								<div class="btn-group  col-md-12">
+								</div>
+							</div>
+						</div>
+						<!-- Submit -->
+						<button type="submit" ui-sref="search.results" ng-click="submit()" class="btn btn-default">Submit</button>
+						<span class="alert alert-danger" ng-show="none" role="alert">{{none}}</span>
+					</form>
+					<h6 class="return" ui-sref="welcome">Back to Welcome Screen</h6>
+				</div>
+			</div>
+			<!-- Results (Column Two & Three) -->
+			<div class='col-md-8'>
+				<div ui-view></div>
+			</div>
+		</div>
+	</div>

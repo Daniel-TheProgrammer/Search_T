@@ -1,0 +1,235 @@
+/* Color palette
+
+Grey: #c9c9c9;
+Light Grey: #e3e3e3;
+Light Blue: #9ad3de;
+Blue: #89bdd3;
+White;
+
+*/
+/*
+img.navbar-brand {
+    position: relative;
+    left: 140px;
+    padding: 0px;
+    } */
+
+    /* Animation Tools */
+    /* make keyframes that tell the start state and the end state of the object */
+    
+    @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+
+/* {
+	border-width: 1px;
+	border-color: black;
+	border-style: solid;
+	} */
+	
+	.jumbotron {
+		opacity:0;  /* make things invisible upon start */
+		-webkit-animation:fadeIn ease-in 1;  
+		-moz-animation:fadeIn ease-in 1;
+		animation:fadeIn ease-in 1;
+		
+		-webkit-animation-fill-mode:forwards; 
+		-moz-animation-fill-mode:forwards;
+		animation-fill-mode:forwards;
+		
+		-webkit-animation-duration:0.4s;
+		-moz-animation-duration:0.4s;
+		animation-duration:0.4s;
+	}
+
+
+	/* Colors the navbar, sets the nav radius */
+
+	.container-fluid.header {
+		background-color: #89bdd3;
+		height: 100px;
+		border-radius: 0px;
+	}
+
+	/* Removes the border on the header */
+
+	nav.navbar.navbar-default {
+		border: none;
+	}
+
+
+	h1#heading {
+		font-family: 'Nunito', sans-serif;
+		font-size: 42pt;
+		color: white;
+		position: relative;
+		text-align: center;
+		text-shadow: 2px 2px #c9c9c9;
+	}
+
+	div.form-group {
+		border-width: 2px;
+		color: blue;
+		max-width: 400px;
+		padding: 2px;
+		padding-bottom: 5px;
+
+	}
+
+	footer.footer {
+		position: fixed;
+		left:0px;
+		right:0px;
+		height: 60px;
+		bottom:0px;
+		width:100%;
+		border-top-style: solid;
+		border-top-color: #89bdd3;
+		border-width: 4px;
+		background: #e3e3e3;
+	}
+
+	/* WELCOME SECTION */
+
+	.row.welcome {
+		padding: 15px;
+		left: 10%;
+	}
+
+	div.btn-group.welcome {
+		width: 100%;
+	}
+
+
+	.question {
+		padding-top: 45px;
+		padding-right: 30px;
+		padding-left:30px;
+	}
+
+	/* SEARCH SECTION */
+	button.welcome {
+		width: 70%;
+		left: 15%;
+	}
+
+	/*** Generic Font Requirements ****/
+
+	h2 {
+		text-align: center;
+	}
+
+	h3 {
+		margin-top: 0px;
+	}
+
+	h3.question {
+		text-align: center; 
+	}
+
+	h4 {
+		text-align: center; 
+	}
+
+	h4.joblist {
+		text-align: left;
+	}
+
+	h4.results {
+		text-align: left;
+	}
+
+	h6 {
+		text-align: center; 
+	}
+
+
+	::-webkit-input-placeholder {
+		text-align: center;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+		text-align: center;  
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+		text-align: center;  
+	}
+
+	:-ms-input-placeholder {  
+		text-align: center; 
+	}
+
+	/* Generic Forms */
+
+	.form-group {
+		margin-bottom: 0px;
+		padding: 10px;
+	}
+
+	div.jumbotron {
+		height: 480px;
+		max-height: 480px;
+		padding: 30px;
+	}
+
+	/* Generic Alert */
+	div.alert {
+		margin-top: 10px
+	}
+
+	.container-fluid.jumbotron {
+		padding: 15px;
+		padding-right:	15px;
+		padding-left: 15px;
+	}
+	form.container {
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+
+	.searchresults {
+		cursor: pointer; 
+	}
+
+
+	.return {
+		cursor: pointer; 
+	}
+
+	/* Generic Results */
+	.resultsbox {
+		height: 300px;
+		overflow: scroll;
+	}
+
+
+
+	.linebreaker {
+		border-top: solid 1px #9ad3de;
+		margin-bottom: 8px;
+		margin-left: 3px;
+		margin-right: 3px;
+	}
+
+	.linebreaker.top {
+		border-top: solid 2px #9ad3de;
+		margin-bottom: 8px;
+		margin-left: 3px;
+		margin-right: 3px;
+	}
+
+	/**** ORDER CHANGE ***/
+
+	.orderchange {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	.sortorder:after {
+		content: '\25b2';
+	}
+	.sortorder.reverse:after {
+		content: '\25bc';
+	}

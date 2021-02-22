@@ -1,0 +1,50 @@
+<div class="col-md-6">
+	<div ng-show="entries" class="jumbotron searchresults">
+		<div class="container">
+			<div class="row">
+				<h3> Results </h3>
+				<h5 class="col-md-12"> Sort By:</h5>
+				<div class="orderchange col-md-4">
+					<h6 class="orderchange" ng-click="order('start_date')"> Start Date  
+					<span class="sortorder" ng-show="predicate === 'start_date'" ng-class="{reverse:reverse}"></span></h6>
+				</div>
+				<div class="orderchange col-md-4">
+					<h6 class="orderchange" ng-click="order('minimum')"> Wage 
+					<span class="sortorder" ng-show="predicate === 'minimum'" ng-class="{reverse:reverse}"></span></h6>
+				</div>
+				<div class="orderchange col-md-4">
+					<h6 class="orderchange" ng-click="order('')"> Relevance</h6>
+				</div>
+			</div>
+			<div class="linebreaker top"></div>
+			<h4 ng-hide="entries[0]"> I'm sorry, your search yielded no results </h4>
+			<div class="resultsbox">
+				<div ng-click="select(i)" ng-repeat="i in entries | orderBy:predicate:reverse | filter: greaterThan('minimum', search.minamount)">
+					
+						<!-- Creates Line between entries -->
+					<div class="linebreaker" ng-if="$index!=0"></div>
+					<!-- Content-->
+					<h3> {{i.position_title}}</h3>
+					<h4  class="joblist" ng-hide="i.locations[1]"> {{i.locations[0]}} </h4>
+					<h4 class="joblist" ng-show="i.locations[1]"> Multiple Locations </h4>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Detailed Job Section -->
+<div class="col-md-6">
+	<div class="jumbotron" ng-show="selected">
+		<h2> {{selected.position_title}} </h2>
+		<div ng-repeat="location in selected.locations">
+			<p> {{location}} </p>
+		</div>
+		<h5> Department: {{selected.organization_name}} </h5>
+		<h5> Start Date: {{selected.start_date | date:'longDate'}} </h5>
+		<h5> End Date: {{selected.end_date | date:'longDate'}} </h5>
+		<h5> Minimum Pay: {{selected.minimum | currency}} </h5>
+		<h5> Maximum Pay: {{selected.maximum | currency}} </h5>
+		<h4><a href="{{selected.url}}"> More infomation </a></h4>
+	</div>
+</div>
